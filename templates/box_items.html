@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{box_name}}</title>
+</head>
+<body style="background: {{color}}">
+    <h1>Things in box:</h1>
+    <div>
+        {% for info in things %}
+        {{info[0]}} - {{info[1]}} <br>
+        {% endfor %}
+    </div>
+    <form><input type=button value="Refresh" onClick="history.go()"></form>
+</body>
+</html>

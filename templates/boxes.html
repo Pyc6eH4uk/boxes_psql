@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Boxes</title>
+</head>
+<body>
+    {% if error %}
+        <span>{{error}}</span>
+    {% endif %}
+    {% if happy %}
+        <span>{{happy}}</span>
+    {% endif %}
+    {% if boxes|length > 0 %}
+        {% for item in boxes %}
+        <p><b style="background: {{item[1]}}">{{item[0]}}</b> - {{item[1]}}. <a href="http://127.0.0.1:5000/boxes/{{item[0]}}">Go to box</a></p>
+        {% endfor %}
+    {% else %}
+    <span>No available boxes :c</span>
+    {% endif %}
+    <form><input type=button value="Refresh" onClick="history.go()"></form>
+
+</body>
+</html>
