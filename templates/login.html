@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Registration</title>
+    <title>Login</title>
 </head>
 <body>
-     <form method="post">
-         <p><input type=text name=name placeholder="Your login"></p>
+     <form method="POST">
+         <p><input type="text" name="name" placeholder="Your login"></p>
          <p><input type="password" name="pwd" placeholder="Your password"></p>
-         <p><input type=submit value=Login></p>
+         <p><input type="submit" value="Login"></p>
     </form>
+    {% if error %}
+        <span>{{error}}</span>
+    {% endif %}
 </body>
 </html>

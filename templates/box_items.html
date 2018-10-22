@@ -6,6 +6,12 @@
 </head>
 <body style="background: {{color}}">
     <h1>Things in box:</h1>
+    {% if things|length == 0 %}
+        Add something in your box
+    {% endif %}
+    {% if error %}
+        <span>{{ error }}</span>
+    {% endif %}
     <div>
         {% for info in things %}
         {{info[0]}} - {{info[1]}} <br>
